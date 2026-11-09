@@ -20,15 +20,15 @@ Inference checkpoints, without the training entry point, are at [huggingface.co/
 
 **Good fit:**
 
-- Reproducing the Ark-ADMET TDC ADMET submission
-- Checking one endpoint before running the full group
-- Reading the exact tree depth, column subset, and blend weight that produced a reported score
+- Retraining all 22 endpoints for five seeds on the official TDC scaffold split and reading the leaderboard mean and standard deviation
+- Checking the tree, PaDEL columns, GIN, MiniMol, and blend weight kept for an endpoint
+- Starting with one fingerprint-only endpoint, then running the rest after that command succeeds
 
-**Probably not a fit:**
+**Not a fit:**
 
-- You want a search over features or hyperparameters. That selection is already finished and is not repeated here
-- You only want to score new SMILES. Use the Hugging Face checkpoints for inference
-- You want the separate Chemprop lipophilicity model (MAE 0.412). It is not part of this CatBoost family
+- Training on your own assay labels or on a split other than the official TDC split
+- Looking for one feature set and one hyperparameter set shared by all 22 endpoints
+- Looking for a ready-made prediction API. Score new SMILES with the [Hugging Face checkpoints](https://huggingface.co/Eonark/Ark-ADMET)
 
 ## This repository vs the checkpoint release
 
@@ -118,6 +118,7 @@ Preprint values stored as `reported_leaderboard`. Lower MAE is better. Higher RO
 
 ## Notes and limits
 
+- The Chemprop lipophilicity model (MAE 0.412) is a separate model. It is not in this CatBoost family and is not trained here.
 - Optional blocks are not bundled. The script builds them from the public PaDEL, DGL-Life, and MiniMol releases.
 - Two solubility test molecules have no MiniMol vector. Those rows use the CatBoost prediction alone.
 - CYP2D6 substrate is the only endpoint with `scale_pos_weight` other than 1. The value is 3.
