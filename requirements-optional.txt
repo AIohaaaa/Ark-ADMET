@@ -1,0 +1,7 @@
+# Only the endpoints that keep these blocks need the matching extra.
+# PaDEL also needs a Java runtime and the PaDEL-Descriptor.jar shipped with padelpy.
+padelpy
+dgllife
+dgl
+torch
+minimol

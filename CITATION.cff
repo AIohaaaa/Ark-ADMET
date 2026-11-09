@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "Ark-ADMET"
+message: "If you use this software, please cite the preprint."
+type: software
+authors:
+  - family-names: Shi
+    given-names: Yuzhu
+  - family-names: Luo
+    given-names: Haoxi
+  - family-names: Liu
+    given-names: Feng
+  - family-names: Zhao
+    given-names: Simiao
+identifiers:
+  - type: doi
+    value: 10.64898/2026.10.28.762420
+    description: bioRxiv preprint
+repository-code: "https://github.com/AIohaaaa/Ark-ADMET"
+url: "https://www.biorxiv.org/content/10.64898/2026.10.28.762420v1"
+license: Apache-2.0
+keywords:
+  - ADMET
+  - Therapeutics Data Commons
+  - CatBoost

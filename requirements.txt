@@ -1,0 +1,7 @@
+PyTDC>=0.4.0
+catboost==1.2.10
+numpy==1.26.4
+pandas
+scikit-learn
+scipy
+rdkit==2026.03.6
