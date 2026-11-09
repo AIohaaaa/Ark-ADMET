@@ -16,20 +16,6 @@ Inference checkpoints, without the training entry point, are at [huggingface.co/
 - Optional PaDEL 3D, frozen `gin_supervised_masking` (300-d), and frozen MiniMol v1 (512-d) blocks, computed once and cached
 - The preprint's test-set summary next to the value `evaluate_many` prints
 
-## Who it is for / not for
-
-**Good fit:**
-
-- Retraining all 22 endpoints for five seeds on the official TDC scaffold split and reading the leaderboard mean and standard deviation
-- Checking the tree, PaDEL columns, GIN, MiniMol, and blend weight kept for an endpoint
-- Starting with one fingerprint-only endpoint, then running the rest after that command succeeds
-
-**Not a fit:**
-
-- Training on your own assay labels or on a split other than the official TDC split
-- Looking for one feature set and one hyperparameter set shared by all 22 endpoints
-- Looking for a ready-made prediction API. Score new SMILES with the [Hugging Face checkpoints](https://huggingface.co/Eonark/Ark-ADMET)
-
 ## This repository vs the checkpoint release
 
 | | This repository | Hugging Face checkpoints |
