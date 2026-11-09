@@ -16,14 +16,18 @@ Inference checkpoints, without the training entry point, are at [huggingface.co/
 - Optional PaDEL 3D, frozen `gin_supervised_masking` (300-d), and frozen MiniMol v1 (512-d) blocks, computed once and cached
 - The preprint's test-set summary next to the value `evaluate_many` prints
 
-## This repository vs the checkpoint release
+## How Ark-ADMET differs from existing models
 
-| | This repository | Hugging Face checkpoints |
-| --- | --- | --- |
-| Purpose | Retrain and score the TDC test set | Predict from the released weights |
-| Leaderboard number | `evaluate_many` mean and standard deviation | Not computed here |
-| Extra features | Built when an endpoint needs them | Caller supplies PaDEL, GIN, and MiniMol arrays |
-| Hyperparameter search | Not included | Not included |
+The comparison is the one in the [preprint](https://doi.org/10.64898/2026.10.28.762420). MapLight and MiniMol each use one configuration on all 22 endpoints. Ark-ADMET keeps one CatBoost backbone and the MapLight fingerprint block, and lets each endpoint accept or reject the same optional pieces.
+
+| | MapLight | MiniMol | Ark-ADMET |
+| --- | --- | --- | --- |
+| Backbone | CatBoost | Frozen graph encoder plus a shallow head | CatBoost |
+| Features on every endpoint | Morgan, Avalon, ErG, and 200 RDKit descriptors. A second entry also appends one frozen graph embedding | The same 512-d encoder | The same MapLight fingerprint block |
+| What can change by endpoint | The published recipe is shared | The published recipe is shared | PaDEL 3D column count, frozen GIN, frozen MiniMol inside the tree, blend weight with a width-128 MiniMol network, and the tree settings |
+| Where that choice is made | One published recipe for every endpoint | One published recipe for every endpoint | One inner Murcko scaffold split of seed 1's training rows. A candidate is kept only when it is strictly better. The official test set is scored after the choice is frozen |
+
+On the preprint's frozen copy of the public leaderboard, the 22 models are rank 1 on 7 of the 21 endpoints that can be ranked. Three of those seven are ahead of the previous best entry: microsome clearance (Spearman 0.634 versus 0.630), PPBR (MAE 7.349 versus 7.440), and CYP3A4 inhibition (AUPRC 0.917 versus 0.916). Four tie the previous best: solubility (0.741), HIA (0.993), Ames (0.871), and CYP2C9 inhibition (0.859). Five more are rank 2 or 3. Nine are rank 4 or worse. No single optional block is present in every rank-1 endpoint. The live board can move after that snapshot.
 
 ## 2-minute quickstart
 
