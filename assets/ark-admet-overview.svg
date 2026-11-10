@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="380" viewBox="0 0 1240 380" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="380" viewBox="0 0 1300 380" role="img" aria-labelledby="title desc">
   <title id="title">Ark-ADMET at a glance</title>
   <desc id="desc">A molecule becomes shared fingerprint blocks plus endpoint-selected optional blocks, then flows through CatBoost and an optional MiniMol head to five TDC test scores summarized as mean and standard deviation.</desc>
   <defs>
@@ -15,25 +15,20 @@
     </style>
   </defs>
 
-  <rect width="1240" height="380" rx="20" fill="#f8fafc"/>
+  <rect width="1300" height="380" rx="20" fill="#f8fafc"/>
 
   <!-- Molecule -->
   <g transform="translate(32 90)">
-    <rect width="154" height="200" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
-    <polygon points="77,35 118,58 118,106 77,129 36,106 36,58" fill="none" stroke="#0284c7" stroke-width="4"/>
-    <line x1="77" y1="35" x2="77" y2="8" stroke="#0284c7" stroke-width="4"/>
-    <line x1="118" y1="82" x2="145" y2="82" stroke="#0284c7" stroke-width="4"/>
-    <circle cx="77" cy="8" r="8" fill="#38bdf8"/>
-    <circle cx="145" cy="82" r="8" fill="#7c3aed"/>
-    <circle cx="36" cy="82" r="8" fill="#16a34a"/>
-    <text x="77" y="164" text-anchor="middle" class="h">SMILES</text>
-    <text x="77" y="184" text-anchor="middle" class="s">22 endpoints</text>
+    <rect width="208" height="200" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <image x="10" y="12" width="188" height="128" href="atorvastatin-ball-stick.png" preserveAspectRatio="xMidYMid meet"/>
+    <text x="104" y="164" text-anchor="middle" class="h">SMILES</text>
+    <text x="104" y="184" text-anchor="middle" class="s">22 endpoints</text>
   </g>
 
-  <path d="M186 190 H222" class="arrow"/>
+  <path d="M240 190 H276" class="arrow"/>
 
   <!-- Shared blocks -->
-  <g transform="translate(226 60)">
+  <g transform="translate(280 60)">
     <text x="110" y="18" text-anchor="middle" class="k">ALWAYS</text>
     <rect x="0" y="34" width="220" height="250" rx="18" fill="#e0f2fe" stroke="#38bdf8" stroke-width="2"/>
     <rect x="20" y="56" width="180" height="42" rx="10" fill="#0284c7"/>
@@ -46,10 +41,10 @@
     <text x="34" y="238" class="l">RDKit</text><text x="185" y="238" text-anchor="end" class="l">200</text>
   </g>
 
-  <path d="M446 190 H482" class="arrow"/>
+  <path d="M500 190 H536" class="arrow"/>
 
   <!-- Optional plugs -->
-  <g transform="translate(486 60)">
+  <g transform="translate(540 60)">
     <text x="105" y="18" text-anchor="middle" class="k">PICK PER ENDPOINT</text>
     <rect x="0" y="34" width="210" height="250" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
     <circle cx="48" cy="82" r="26" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
@@ -66,10 +61,10 @@
     <text x="92" y="248" class="s">5 / 22 in tree</text>
   </g>
 
-  <path d="M696 190 H732" class="arrow"/>
+  <path d="M750 190 H786" class="arrow"/>
 
   <!-- CatBoost tree -->
-  <g transform="translate(736 76)">
+  <g transform="translate(790 76)">
     <rect width="178" height="184" rx="18" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2"/>
     <text x="89" y="28" text-anchor="middle" class="h">CatBoost</text>
     <line x1="89" y1="62" x2="52" y2="103" stroke="#7c3aed" stroke-width="3"/>
@@ -88,24 +83,24 @@
   </g>
 
   <!-- Optional head and blend -->
-  <path d="M825 260 V287" fill="none" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5 5"/>
-  <rect x="736" y="287" width="178" height="54" rx="14" fill="#ffffff" stroke="#a78bfa" stroke-width="2"/>
-  <circle cx="762" cy="314" r="7" fill="#c4b5fd"/>
-  <circle cx="783" cy="304" r="7" fill="#a78bfa"/>
-  <circle cx="783" cy="324" r="7" fill="#a78bfa"/>
-  <circle cx="804" cy="314" r="7" fill="#7c3aed"/>
-  <text x="822" y="310" class="l">MiniMol head</text>
-  <text x="822" y="328" class="s">12 / 22</text>
+  <path d="M879 260 V287" fill="none" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5 5"/>
+  <rect x="790" y="287" width="178" height="54" rx="14" fill="#ffffff" stroke="#a78bfa" stroke-width="2"/>
+  <circle cx="816" cy="314" r="7" fill="#c4b5fd"/>
+  <circle cx="837" cy="304" r="7" fill="#a78bfa"/>
+  <circle cx="837" cy="324" r="7" fill="#a78bfa"/>
+  <circle cx="858" cy="314" r="7" fill="#7c3aed"/>
+  <text x="876" y="310" class="l">MiniMol head</text>
+  <text x="876" y="328" class="s">12 / 22</text>
 
-  <path d="M914 168 H948" class="arrow"/>
-  <path d="M914 314 H964 V206" fill="none" stroke="#7c3aed" stroke-width="2"/>
-  <circle cx="964" cy="190" r="14" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
-  <line x1="957" y1="190" x2="971" y2="190" stroke="#7c3aed" stroke-width="2"/>
-  <line x1="964" y1="183" x2="964" y2="197" stroke="#7c3aed" stroke-width="2"/>
-  <path d="M978 190 H992" class="arrow"/>
+  <path d="M968 168 H1002" class="arrow"/>
+  <path d="M968 314 H1018 V206" fill="none" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="1018" cy="190" r="14" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="1011" y1="190" x2="1025" y2="190" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="1018" y1="183" x2="1018" y2="197" stroke="#7c3aed" stroke-width="2"/>
+  <path d="M1032 190 H1046" class="arrow"/>
 
   <!-- Five runs and result -->
-  <g transform="translate(994 70)">
+  <g transform="translate(1048 70)">
     <rect width="214" height="240" rx="18" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
     <text x="107" y="34" text-anchor="middle" class="k">OFFICIAL TDC TEST</text>
     <g transform="translate(13 62)">
