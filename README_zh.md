@@ -122,7 +122,6 @@ PaDEL、GIN 和 MiniMol 在某个端点第一次用到时计算，之后从 `./c
 
 ## 限制
 
-- 亲脂性的 Chemprop（MAE 0.412）是另一条模型，不在这组 CatBoost 里，这里也不训练。
 - 可选特征块不随仓库发布。脚本用公开的 PaDEL、DGL-Life 和 MiniMol 现算。
 - 溶解度测试集有两个分子没有 MiniMol 向量，这两行退回 CatBoost。
 - 只有 CYP2D6 底物的 `scale_pos_weight` 不是 1，取值是 3。

@@ -122,7 +122,6 @@ Preprint values stored as `reported_leaderboard`. Lower MAE is better. Higher RO
 
 ## Notes and limits
 
-- The Chemprop lipophilicity model (MAE 0.412) is a separate model. It is not in this CatBoost family and is not trained here.
 - Optional blocks are not bundled. The script builds them from the public PaDEL, DGL-Life, and MiniMol releases.
 - Two solubility test molecules have no MiniMol vector. Those rows use the CatBoost prediction alone.
 - CYP2D6 substrate is the only endpoint with `scale_pos_weight` other than 1. The value is 3.
