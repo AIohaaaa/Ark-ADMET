@@ -2,6 +2,12 @@
 
 [English](README.md)
 
+[![Python 3.11](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![PyTDC](https://img.shields.io/badge/PyTDC-%E2%89%A50.4.0-0A7BBC)](https://tdcommons.ai/)
+[![CatBoost](https://img.shields.io/badge/CatBoost-1.2.10-FFCC00)](https://catboost.ai/)
+[![RDKit](https://img.shields.io/badge/RDKit-2026.03.6-1F77B4)](https://www.rdkit.org/)
+[![License](https://img.shields.io/badge/License-Apache--2.0-4C1)](LICENSE)
+
 一个分子要成为有潜力的药物候选物，除了能作用于靶点，还要能够被吸收、在体内合理分布和代谢、顺利排泄，并具有可接受的安全性。这五类性质合称 **ADMET：吸收、分布、代谢、排泄和毒性**，是药物发现早期筛选候选分子的核心环节。
 
 **Ark-ADMET 是一组面向 Therapeutics Data Commons ADMET 基准、针对 22 个端点分别配置的 CatBoost 模型。** 本仓库用每个端点已经冻结的配置、5 个随机种子和官方测试集评价器复现提交结果。

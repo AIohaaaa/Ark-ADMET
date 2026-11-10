@@ -2,6 +2,12 @@
 
 [中文版本](README_zh.md)
 
+[![Python 3.11](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![PyTDC](https://img.shields.io/badge/PyTDC-%E2%89%A50.4.0-0A7BBC)](https://tdcommons.ai/)
+[![CatBoost](https://img.shields.io/badge/CatBoost-1.2.10-FFCC00)](https://catboost.ai/)
+[![RDKit](https://img.shields.io/badge/RDKit-2026.03.6-1F77B4)](https://www.rdkit.org/)
+[![License](https://img.shields.io/badge/License-Apache--2.0-4C1)](LICENSE)
+
 A promising molecule must do more than bind its target: it also needs to be absorbed, distributed through the body, metabolized, excreted, and sufficiently safe. These five property groups—**absorption, distribution, metabolism, excretion, and toxicity**—are collectively known as ADMET and are central to early drug-candidate screening.
 
 **Ark-ADMET is a family of 22 endpoint-specific CatBoost models built for the Therapeutics Data Commons ADMET benchmark.** This repository reproduces the submitted results with one frozen recipe per endpoint, five random seeds, and the official test-set evaluator.
