@@ -2,7 +2,9 @@
 
 [English](README.md)
 
-**Ark-ADMET 用每个端点已经冻结的配置、5 个随机种子和官方测试集评价器，复现提交到 Therapeutics Data Commons 的 ADMET 结果。**
+**ADMET 不是一种单独的模型，而是一组预测分子吸收（A）、分布（D）、代谢（M）、排泄（E）和毒性（T）的任务。这些性质通常用于药物发现早期的候选分子筛选。**
+
+**Ark-ADMET 是一组针对 22 个 ADMET 端点分别配置的 CatBoost 模型。本仓库用每个端点已经冻结的配置、5 个随机种子和官方测试集评价器，复现提交到 Therapeutics Data Commons 的结果。**
 
 每个端点共用同一段指纹，并按端点决定是否加上 PaDEL 三维列、冻结的 GIN 向量、冻结的 MiniMol 向量，以及一个只看 MiniMol 的小网络。本仓库在官方划分上跑种子 1–5，打印 TDC 榜单表单要的均值和标准差。
 
