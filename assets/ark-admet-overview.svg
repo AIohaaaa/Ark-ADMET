@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1300" height="380" viewBox="0 0 1300 380" role="img" aria-labelledby="title desc">
   <title id="title">Ark-ADMET at a glance</title>
-  <desc id="desc">A molecule becomes shared fingerprint blocks plus endpoint-selected optional blocks, then flows through CatBoost and an optional MiniMol head to five TDC test scores summarized as mean and standard deviation.</desc>
+  <desc id="desc">A molecule becomes shared fingerprint blocks plus endpoint-selected optional blocks, then flows through CatBoost and an optional MiniMol MLP to five TDC test scores summarized as mean and standard deviation.</desc>
   <defs>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
@@ -9,6 +9,7 @@
       .h { font: 700 21px Arial, sans-serif; fill: #0f172a; }
       .k { font: 700 13px Arial, sans-serif; fill: #475569; letter-spacing: 1.5px; }
       .l { font: 700 14px Arial, sans-serif; fill: #0f172a; }
+      .mlp { font: 700 12px Arial, sans-serif; fill: #0f172a; }
       .s { font: 400 12px Arial, sans-serif; fill: #475569; }
       .w { font: 700 13px Arial, sans-serif; fill: #ffffff; }
       .arrow { fill: none; stroke: #64748b; stroke-width: 2.5; marker-end: url(#arrow); }
@@ -89,8 +90,8 @@
   <circle cx="837" cy="304" r="7" fill="#a78bfa"/>
   <circle cx="837" cy="324" r="7" fill="#a78bfa"/>
   <circle cx="858" cy="314" r="7" fill="#7c3aed"/>
-  <text x="876" y="310" class="l">MiniMol head</text>
-  <text x="876" y="328" class="s">12 / 22</text>
+  <text x="866" y="310" class="mlp">MiniMol MLP</text>
+  <text x="866" y="328" class="s">12 / 22</text>
 
   <path d="M968 168 H1002" class="arrow"/>
   <path d="M968 314 H1018 V206" fill="none" stroke="#7c3aed" stroke-width="2"/>
