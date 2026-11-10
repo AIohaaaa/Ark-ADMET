@@ -1,43 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="275" viewBox="0 0 1000 275" role="img" aria-labelledby="title desc">
-  <title id="title">Ark-ADMET leaderboard rank snapshot</title>
-  <desc id="desc">Among 21 rankable endpoints in the preprint snapshot, seven rank first, five rank second or third, and nine rank fourth or lower.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="320" viewBox="0 0 1000 320" role="img" aria-labelledby="title desc">
+  <title id="title">Ark-ADMET leaderboard snapshot</title>
+  <desc id="desc">In the preprint snapshot, seven of 21 rankable endpoints rank first and 12 finish in the top three. Nine rank fourth or lower.</desc>
   <defs>
     <style>
       .title { font: 700 24px Arial, sans-serif; fill: #0f172a; }
       .subtitle { font: 400 14px Arial, sans-serif; fill: #475569; }
-      .number { font: 700 30px Arial, sans-serif; fill: #ffffff; }
-      .segment { font: 700 14px Arial, sans-serif; fill: #ffffff; }
-      .detail { font: 400 14px Arial, sans-serif; fill: #334155; }
+      .heroNumber { font: 700 58px Arial, sans-serif; fill: #0369a1; }
+      .heroLabel { font: 700 21px Arial, sans-serif; fill: #0f172a; }
+      .cardNumber { font: 700 32px Arial, sans-serif; fill: #6d28d9; }
+      .mutedNumber { font: 700 32px Arial, sans-serif; fill: #475569; }
+      .cardLabel { font: 700 16px Arial, sans-serif; fill: #0f172a; }
+      .detail { font: 400 13px Arial, sans-serif; fill: #475569; }
+      .pill { font: 700 13px Arial, sans-serif; fill: #075985; }
       .note { font: 400 12px Arial, sans-serif; fill: #64748b; }
     </style>
-    <clipPath id="barClip">
-      <rect x="38" y="92" width="924" height="82" rx="13"/>
-    </clipPath>
   </defs>
 
-  <rect width="1000" height="275" rx="18" fill="#f8fafc"/>
-  <text x="38" y="46" class="title">Preprint leaderboard snapshot</text>
-  <text x="38" y="69" class="subtitle">21 rankable endpoints; live rankings may change after this frozen public-board snapshot.</text>
+  <rect width="1000" height="320" rx="18" fill="#f8fafc"/>
+  <text x="38" y="44" class="title">Leaderboard snapshot</text>
+  <text x="38" y="68" class="subtitle">21 rankable endpoints on the frozen public board used in the preprint</text>
 
-  <g clip-path="url(#barClip)">
-    <rect x="38" y="92" width="308" height="82" fill="#0284c7"/>
-    <rect x="346" y="92" width="220" height="82" fill="#7c3aed"/>
-    <rect x="566" y="92" width="396" height="82" fill="#64748b"/>
-  </g>
+  <rect x="38" y="91" width="450" height="169" rx="16" fill="#e0f2fe" stroke="#38bdf8" stroke-width="2"/>
+  <text x="68" y="157" class="heroNumber">7</text>
+  <text x="68" y="188" class="heroLabel">rank 1 finishes</text>
+  <text x="68" y="213" class="detail">One third of all rankable endpoints</text>
 
-  <text x="192" y="129" text-anchor="middle" class="number">7</text>
-  <text x="192" y="153" text-anchor="middle" class="segment">rank 1</text>
+  <rect x="278" y="119" width="174" height="44" rx="22" fill="#ffffff"/>
+  <circle cx="300" cy="141" r="6" fill="#0284c7"/>
+  <text x="315" y="146" class="pill">3 new best scores</text>
+  <rect x="278" y="177" width="174" height="44" rx="22" fill="#ffffff"/>
+  <circle cx="300" cy="199" r="6" fill="#38bdf8"/>
+  <text x="315" y="204" class="pill">4 tied for first</text>
 
-  <text x="456" y="129" text-anchor="middle" class="number">5</text>
-  <text x="456" y="153" text-anchor="middle" class="segment">rank 2-3</text>
+  <rect x="508" y="91" width="454" height="78" rx="14" fill="#ede9fe" stroke="#a78bfa" stroke-width="2"/>
+  <text x="534" y="140" class="cardNumber">12 / 21</text>
+  <text x="668" y="124" class="cardLabel">finished in the top 3</text>
+  <text x="668" y="146" class="detail">7 rank 1, plus 5 rank 2-3</text>
 
-  <text x="764" y="129" text-anchor="middle" class="number">9</text>
-  <text x="764" y="153" text-anchor="middle" class="segment">rank 4 or lower</text>
+  <rect x="508" y="182" width="454" height="78" rx="14" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="534" y="231" class="mutedNumber">9</text>
+  <text x="596" y="215" class="cardLabel">rank 4 or lower</text>
+  <text x="596" y="237" class="detail">Retained here for complete reporting</text>
 
-  <circle cx="50" cy="211" r="6" fill="#0284c7"/>
-  <text x="66" y="216" class="detail">3 ahead of the previous best</text>
-  <circle cx="390" cy="211" r="6" fill="#38bdf8"/>
-  <text x="406" y="216" class="detail">4 tied for first</text>
-
-  <text x="38" y="254" class="note">Bioavailability is reported but excluded from rank counts because the public page repeated P-gp scores.</text>
+  <text x="38" y="291" class="note">Live rankings may change. Bioavailability is reported but excluded from rank counts because the public page repeated P-gp scores.</text>
 </svg>
