@@ -21,8 +21,8 @@
   <g transform="translate(32 90)">
     <rect width="208" height="200" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
     <image x="10" y="12" width="188" height="128" href="atorvastatin-ball-stick.png" preserveAspectRatio="xMidYMid meet"/>
-    <text x="104" y="164" text-anchor="middle" class="h">SMILES</text>
-    <text x="104" y="184" text-anchor="middle" class="s">22 endpoints</text>
+    <text x="104" y="164" text-anchor="middle" class="h">Molecule</text>
+    <text x="104" y="184" text-anchor="middle" class="s">input: SMILES</text>
   </g>
 
   <path d="M240 190 H276" class="arrow"/>
