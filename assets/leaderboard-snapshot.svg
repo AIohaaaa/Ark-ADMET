@@ -15,8 +15,8 @@
   <text x="36" y="42" class="title">Preprint snapshot</text>
 
   <!-- Trophy -->
-  <g transform="translate(36 67)">
-    <rect width="370" height="197" rx="18" fill="#e0f2fe" stroke="#38bdf8" stroke-width="2"/>
+  <g transform="translate(36 70)">
+    <rect width="390" height="210" rx="18" fill="#e0f2fe" stroke="#38bdf8" stroke-width="2"/>
     <path d="M43 30 H113 V78 C113 111 98 128 78 134 V151 H101 V165 H55 V151 H78 V134 C58 128 43 111 43 78 Z" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
     <path d="M43 43 H23 V64 C23 83 34 94 51 97" fill="none" stroke="#d97706" stroke-width="7"/>
     <path d="M113 43 H133 V64 C133 83 122 94 105 97" fill="none" stroke="#d97706" stroke-width="7"/>
@@ -35,44 +35,44 @@
   </g>
 
   <!-- 21-dot result field -->
-  <g transform="translate(442 67)">
-    <rect width="522" height="197" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
-    <text x="28" y="39" class="big">12 / 21</text>
-    <text x="205" y="30" class="label">in the top 3</text>
-    <text x="205" y="49" class="small">each dot is one rankable endpoint</text>
+  <g transform="translate(446 70)">
+    <rect width="518" height="210" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="28" y="58" class="big">12 / 21</text>
+    <text x="220" y="43" class="label">in the top 3</text>
+    <text x="220" y="64" class="small">each dot is one rankable endpoint</text>
 
     <!-- rank 1: 7 -->
-    <circle cx="43" cy="91" r="13" fill="#0284c7"/>
-    <circle cx="82" cy="91" r="13" fill="#0284c7"/>
-    <circle cx="121" cy="91" r="13" fill="#0284c7"/>
-    <circle cx="160" cy="91" r="13" fill="#0284c7"/>
-    <circle cx="199" cy="91" r="13" fill="#0284c7"/>
-    <circle cx="238" cy="91" r="13" fill="#0284c7"/>
-    <circle cx="277" cy="91" r="13" fill="#0284c7"/>
+    <circle cx="43" cy="105" r="13" fill="#0284c7"/>
+    <circle cx="82" cy="105" r="13" fill="#0284c7"/>
+    <circle cx="121" cy="105" r="13" fill="#0284c7"/>
+    <circle cx="160" cy="105" r="13" fill="#0284c7"/>
+    <circle cx="199" cy="105" r="13" fill="#0284c7"/>
+    <circle cx="238" cy="105" r="13" fill="#0284c7"/>
+    <circle cx="277" cy="105" r="13" fill="#0284c7"/>
 
     <!-- rank 2-3: 5, followed by rank 4+: 2 -->
-    <circle cx="43" cy="130" r="13" fill="#7c3aed"/>
-    <circle cx="82" cy="130" r="13" fill="#7c3aed"/>
-    <circle cx="121" cy="130" r="13" fill="#7c3aed"/>
-    <circle cx="160" cy="130" r="13" fill="#7c3aed"/>
-    <circle cx="199" cy="130" r="13" fill="#7c3aed"/>
-    <circle cx="238" cy="130" r="13" fill="#cbd5e1"/>
-    <circle cx="277" cy="130" r="13" fill="#cbd5e1"/>
+    <circle cx="43" cy="147" r="13" fill="#7c3aed"/>
+    <circle cx="82" cy="147" r="13" fill="#7c3aed"/>
+    <circle cx="121" cy="147" r="13" fill="#7c3aed"/>
+    <circle cx="160" cy="147" r="13" fill="#7c3aed"/>
+    <circle cx="199" cy="147" r="13" fill="#7c3aed"/>
+    <circle cx="238" cy="147" r="13" fill="#cbd5e1"/>
+    <circle cx="277" cy="147" r="13" fill="#cbd5e1"/>
 
     <!-- rank 4+: 7 -->
-    <circle cx="43" cy="169" r="13" fill="#cbd5e1"/>
-    <circle cx="82" cy="169" r="13" fill="#cbd5e1"/>
-    <circle cx="121" cy="169" r="13" fill="#cbd5e1"/>
-    <circle cx="160" cy="169" r="13" fill="#cbd5e1"/>
-    <circle cx="199" cy="169" r="13" fill="#cbd5e1"/>
-    <circle cx="238" cy="169" r="13" fill="#cbd5e1"/>
-    <circle cx="277" cy="169" r="13" fill="#cbd5e1"/>
+    <circle cx="43" cy="189" r="13" fill="#cbd5e1"/>
+    <circle cx="82" cy="189" r="13" fill="#cbd5e1"/>
+    <circle cx="121" cy="189" r="13" fill="#cbd5e1"/>
+    <circle cx="160" cy="189" r="13" fill="#cbd5e1"/>
+    <circle cx="199" cy="189" r="13" fill="#cbd5e1"/>
+    <circle cx="238" cy="189" r="13" fill="#cbd5e1"/>
+    <circle cx="277" cy="189" r="13" fill="#cbd5e1"/>
 
-    <circle cx="345" cy="92" r="6" fill="#0284c7"/>
-    <text x="359" y="97" class="small">7 rank 1</text>
-    <circle cx="345" cy="129" r="6" fill="#7c3aed"/>
-    <text x="359" y="134" class="small">5 rank 2-3</text>
-    <circle cx="345" cy="166" r="6" fill="#cbd5e1"/>
-    <text x="359" y="171" class="small">9 rank 4+</text>
+    <circle cx="350" cy="105" r="6" fill="#0284c7"/>
+    <text x="365" y="110" class="small">7 rank 1</text>
+    <circle cx="350" cy="147" r="6" fill="#7c3aed"/>
+    <text x="365" y="152" class="small">5 rank 2-3</text>
+    <circle cx="350" cy="189" r="6" fill="#cbd5e1"/>
+    <text x="365" y="194" class="small">9 rank 4+</text>
   </g>
 </svg>
