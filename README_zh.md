@@ -34,7 +34,7 @@
 在预印本使用的那份公开榜单快照上，21 个能排名的端点里有 7 个第 1。其中 3 个超过当时的最好成绩：微粒体清除（Spearman 0.634 对 0.630）、PPBR（MAE 7.349 对 7.440）、CYP3A4 抑制（AUPRC 0.917 对 0.916）。4 个与当时最好成绩相同：溶解度（0.741）、HIA（0.993）、Ames（0.871）、CYP2C9 抑制（0.859）。另有 5 个是第 2 或第 3，9 个是第 4 及以后。没有任何一个可选部件出现在全部第 1 名里。快照之后的实时榜单还会变。
 
 <p align="center">
-  <img src="assets/leaderboard-snapshot.svg" alt="预印本所用榜单快照中的排名分布" width="100%">
+  <img src="assets/leaderboard-snapshot.png" alt="预印本所用榜单快照中的排名分布" width="100%">
 </p>
 
 ## 两分钟上手

@@ -17,11 +17,7 @@
   <!-- Trophy -->
   <g transform="translate(36 70)">
     <rect width="390" height="210" rx="18" fill="#e0f2fe" stroke="#38bdf8" stroke-width="2"/>
-    <path d="M43 30 H113 V78 C113 111 98 128 78 134 V151 H101 V165 H55 V151 H78 V134 C58 128 43 111 43 78 Z" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
-    <path d="M43 43 H23 V64 C23 83 34 94 51 97" fill="none" stroke="#d97706" stroke-width="7"/>
-    <path d="M113 43 H133 V64 C133 83 122 94 105 97" fill="none" stroke="#d97706" stroke-width="7"/>
-    <circle cx="78" cy="76" r="22" fill="#ffffff"/>
-    <text x="78" y="84" text-anchor="middle" class="title">#1</text>
+    <image x="8" y="15" width="140" height="180" href="golden-trophy.png" preserveAspectRatio="xMidYMid meet"/>
 
     <text x="166" y="84" class="big">7</text>
     <text x="166" y="111" class="label">first-place endpoints</text>
@@ -38,8 +34,8 @@
   <g transform="translate(446 70)">
     <rect width="518" height="210" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
     <text x="28" y="58" class="big">12 / 21</text>
-    <text x="220" y="43" class="label">in the top 3</text>
-    <text x="220" y="64" class="small">each dot is one rankable endpoint</text>
+    <text x="260" y="43" class="label">in the top 3</text>
+    <text x="260" y="64" class="small">each dot is one rankable endpoint</text>
 
     <!-- rank 1: 7 -->
     <circle cx="43" cy="105" r="13" fill="#0284c7"/>

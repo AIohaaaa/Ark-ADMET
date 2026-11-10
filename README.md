@@ -34,7 +34,7 @@ The comparison is the one in the [preprint](https://doi.org/10.64898/2026.10.28.
 On the preprint's frozen copy of the public leaderboard, the 22 models are rank 1 on 7 of the 21 endpoints that can be ranked. Three of those seven are ahead of the previous best entry: microsome clearance (Spearman 0.634 versus 0.630), PPBR (MAE 7.349 versus 7.440), and CYP3A4 inhibition (AUPRC 0.917 versus 0.916). Four tie the previous best: solubility (0.741), HIA (0.993), Ames (0.871), and CYP2C9 inhibition (0.859). Five more are rank 2 or 3. Nine are rank 4 or worse. No single optional block is present in every rank-1 endpoint. The live board can move after that snapshot.
 
 <p align="center">
-  <img src="assets/leaderboard-snapshot.svg" alt="Rank distribution on the leaderboard snapshot used in the preprint" width="100%">
+  <img src="assets/leaderboard-snapshot.png" alt="Rank distribution on the leaderboard snapshot used in the preprint" width="100%">
 </p>
 
 ## 2-minute quickstart
