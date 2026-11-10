@@ -75,7 +75,7 @@ PaDEL、GIN 和 MiniMol 在某个端点第一次用到时计算，之后从 `./c
 4. 按冻结配置加上可选特征；`blend_weight > 0` 时，再与只看 MiniMol、宽度 128 的网络混合。
 5. 用 `group.evaluate_many` 给官方测试表打分。
 
-提交时的硬件：一块 NVIDIA L20，CatBoost `task_type="GPU"`、`devices="0"`、`gpu_ram_part=0.85`。MiniMol 小网络在 CPU 上训练。
+CatBoost 在一块 NVIDIA L20 上训练，MiniMol 小网络在 CPU 上训练。改用 CPU 跑树时，第三位小数可能不同。
 
 ## 预印本中的测试结果
 

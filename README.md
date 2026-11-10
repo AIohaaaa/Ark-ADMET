@@ -75,7 +75,7 @@ For every endpoint and every seed in `{1, 2, 3, 4, 5}` the script:
 4. Adds the frozen optional blocks and, when `blend_weight > 0`, mixes in a width-128 network trained on MiniMol alone.
 5. Scores the official test table with `group.evaluate_many`.
 
-Submitted hardware: one NVIDIA L20, CatBoost `task_type="GPU"`, `devices="0"`, `gpu_ram_part=0.85`. The MiniMol head runs on CPU.
+CatBoost was trained on one NVIDIA L20. The MiniMol network was trained on CPU. Training the trees on CPU can change the third decimal place.
 
 ## Reported test summary
 
