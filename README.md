@@ -2,9 +2,9 @@
 
 [中文版本](README_zh.md)
 
-**ADMET is not a single model. It is a family of prediction tasks for a molecule's absorption, distribution, metabolism, excretion, and toxicity—the properties commonly checked during early drug discovery.**
+A promising molecule must do more than bind its target: it also needs to be absorbed, distributed through the body, metabolized, excreted, and sufficiently safe. These five property groups—**absorption, distribution, metabolism, excretion, and toxicity**—are collectively known as ADMET and are central to early drug-candidate screening.
 
-**Ark-ADMET is a family of 22 endpoint-specific CatBoost models. This repository reproduces their submitted Therapeutics Data Commons results with one frozen recipe per endpoint, five random seeds, and the official test-set evaluator.**
+**Ark-ADMET is a family of 22 endpoint-specific CatBoost models built for the Therapeutics Data Commons ADMET benchmark.** This repository reproduces the submitted results with one frozen recipe per endpoint, five random seeds, and the official test-set evaluator.
 
 Each endpoint keeps the same fingerprint block and may add PaDEL 3D columns, a frozen GIN embedding, a frozen MiniMol embedding, and a small network trained only on that MiniMol vector. This repository runs seeds 1–5 on the official split and prints the mean and standard deviation that the TDC leaderboard form asks for.
 
