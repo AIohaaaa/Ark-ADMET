@@ -75,8 +75,6 @@ PaDEL、GIN 和 MiniMol 在某个端点第一次用到时计算，之后从 `./c
 4. 按冻结配置加上可选特征；`blend_weight > 0` 时，再与只看 MiniMol、宽度 128 的网络混合。
 5. 用 `group.evaluate_many` 给官方测试表打分。
 
-CatBoost 在一块 NVIDIA L20 上训练，MiniMol 小网络在 CPU 上训练。改用 CPU 跑树时，第三位小数可能不同。
-
 ## 预印本中的测试结果
 
 这些数存在配置的 `reported_leaderboard` 里。MAE 越低越好。ROC-AUC、AUPRC 和 Spearman 越高越好。
