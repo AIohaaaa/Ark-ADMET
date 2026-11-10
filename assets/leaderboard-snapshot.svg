@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="275" viewBox="0 0 1000 275" role="img" aria-labelledby="title desc">
+  <title id="title">Ark-ADMET leaderboard rank snapshot</title>
+  <desc id="desc">Among 21 rankable endpoints in the preprint snapshot, seven rank first, five rank second or third, and nine rank fourth or lower.</desc>
+  <defs>
+    <style>
+      .title { font: 700 24px Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 14px Arial, sans-serif; fill: #475569; }
+      .number { font: 700 30px Arial, sans-serif; fill: #ffffff; }
+      .segment { font: 700 14px Arial, sans-serif; fill: #ffffff; }
+      .detail { font: 400 14px Arial, sans-serif; fill: #334155; }
+      .note { font: 400 12px Arial, sans-serif; fill: #64748b; }
+    </style>
+    <clipPath id="barClip">
+      <rect x="38" y="92" width="924" height="82" rx="13"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1000" height="275" rx="18" fill="#f8fafc"/>
+  <text x="38" y="46" class="title">Preprint leaderboard snapshot</text>
+  <text x="38" y="69" class="subtitle">21 rankable endpoints; live rankings may change after this frozen public-board snapshot.</text>
+
+  <g clip-path="url(#barClip)">
+    <rect x="38" y="92" width="308" height="82" fill="#0284c7"/>
+    <rect x="346" y="92" width="220" height="82" fill="#7c3aed"/>
+    <rect x="566" y="92" width="396" height="82" fill="#64748b"/>
+  </g>
+
+  <text x="192" y="129" text-anchor="middle" class="number">7</text>
+  <text x="192" y="153" text-anchor="middle" class="segment">rank 1</text>
+
+  <text x="456" y="129" text-anchor="middle" class="number">5</text>
+  <text x="456" y="153" text-anchor="middle" class="segment">rank 2-3</text>
+
+  <text x="764" y="129" text-anchor="middle" class="number">9</text>
+  <text x="764" y="153" text-anchor="middle" class="segment">rank 4 or lower</text>
+
+  <circle cx="50" cy="211" r="6" fill="#0284c7"/>
+  <text x="66" y="216" class="detail">3 ahead of the previous best</text>
+  <circle cx="390" cy="211" r="6" fill="#38bdf8"/>
+  <text x="406" y="216" class="detail">4 tied for first</text>
+
+  <text x="38" y="254" class="note">Bioavailability is reported but excluded from rank counts because the public page repeated P-gp scores.</text>
+</svg>

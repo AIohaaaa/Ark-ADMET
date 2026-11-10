@@ -13,7 +13,7 @@ from ark_admet.blocks import gin_matrix, minimol_matrix, padel_matrix
 from ark_admet.features import assemble, fingerprints, row_index
 from ark_admet.model import fit_catboost, fit_head, mix
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parent
 CONFIG = json.loads((ROOT / "configs" / "endpoints.json").read_text())
 SEEDS = tuple(CONFIG["seeds"])
 

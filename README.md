@@ -2,11 +2,15 @@
 
 [中文版本](README_zh.md)
 
-**Ark-ADMET retrains one CatBoost model per Therapeutics Data Commons ADMET endpoint and scores it with the official test-set evaluator.**
+**Ark-ADMET reproduces the submitted Therapeutics Data Commons ADMET results with one frozen recipe per endpoint, five random seeds, and the official test-set evaluator.**
 
-The configuration is frozen. Each endpoint keeps the same fingerprint block and may add PaDEL 3D columns, a frozen GIN embedding, a frozen MiniMol embedding, and a small network trained only on that MiniMol vector. This repository runs seeds 1–5 on the official scaffold split and prints the mean and standard deviation that the TDC leaderboard form asks for.
+Each endpoint keeps the same fingerprint block and may add PaDEL 3D columns, a frozen GIN embedding, a frozen MiniMol embedding, and a small network trained only on that MiniMol vector. This repository runs seeds 1–5 on the official split and prints the mean and standard deviation that the TDC leaderboard form asks for.
 
 Inference checkpoints, without the training entry point, are at [huggingface.co/Eonark/Ark-ADMET](https://huggingface.co/Eonark/Ark-ADMET). The preprint is [bioRxiv 2026.10.28.762420](https://doi.org/10.64898/2026.10.28.762420).
+
+<p align="center">
+  <img src="assets/ark-admet-overview.svg" alt="Ark-ADMET feature, model, and evaluation flow" width="100%">
+</p>
 
 ## What Ark-ADMET provides
 
@@ -28,6 +32,10 @@ The comparison is the one in the [preprint](https://doi.org/10.64898/2026.10.28.
 | How the settings are chosen | The authors published one recipe and used it for all 22 properties | The authors published one recipe and used it for all 22 properties | Each property gets its own setting. A held-out piece of the training data is the comparison: a new setting is kept only when it scores better. The test set is not part of that comparison and is scored only after the setting is fixed |
 
 On the preprint's frozen copy of the public leaderboard, the 22 models are rank 1 on 7 of the 21 endpoints that can be ranked. Three of those seven are ahead of the previous best entry: microsome clearance (Spearman 0.634 versus 0.630), PPBR (MAE 7.349 versus 7.440), and CYP3A4 inhibition (AUPRC 0.917 versus 0.916). Four tie the previous best: solubility (0.741), HIA (0.993), Ames (0.871), and CYP2C9 inhibition (0.859). Five more are rank 2 or 3. Nine are rank 4 or worse. No single optional block is present in every rank-1 endpoint. The live board can move after that snapshot.
+
+<p align="center">
+  <img src="assets/leaderboard-snapshot.svg" alt="Rank distribution on the leaderboard snapshot used in the preprint" width="100%">
+</p>
 
 ## 2-minute quickstart
 
@@ -60,6 +68,14 @@ python reproduce_tdc.py --endpoint pgp_broccatelli --device gpu
 The command prints `evaluate_many` for that endpoint and writes `cache/leaderboard_results.json`. Each seed is rounded to three decimal places. The reported pair is the mean and population standard deviation of those five numbers, again rounded to three decimal places.
 
 ## Full group
+
+Install the optional blocks and make sure a Java runtime is on `PATH`:
+
+```bash
+pip install -r requirements-optional.txt
+```
+
+Then run all 22 endpoints:
 
 ```bash
 python reproduce_tdc.py --all --device gpu

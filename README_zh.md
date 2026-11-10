@@ -2,11 +2,15 @@
 
 [English](README.md)
 
-**Ark-ADMET 为 Therapeutics Data Commons 的每个 ADMET 端点各重训一棵 CatBoost，并用官方测试集评价器打分。**
+**Ark-ADMET 用每个端点已经冻结的配置、5 个随机种子和官方测试集评价器，复现提交到 Therapeutics Data Commons 的 ADMET 结果。**
 
-配置已经冻结。每个端点共用同一段指纹，并按端点决定是否加上 PaDEL 三维列、冻结的 GIN 向量、冻结的 MiniMol 向量，以及一个只看 MiniMol 的小网络。本仓库在官方骨架划分上跑种子 1–5，打印 TDC 榜单表单要的均值和标准差。
+每个端点共用同一段指纹，并按端点决定是否加上 PaDEL 三维列、冻结的 GIN 向量、冻结的 MiniMol 向量，以及一个只看 MiniMol 的小网络。本仓库在官方划分上跑种子 1–5，打印 TDC 榜单表单要的均值和标准差。
 
 只做推理的检查点在 [huggingface.co/Eonark/Ark-ADMET](https://huggingface.co/Eonark/Ark-ADMET)。预印本是 [bioRxiv 2026.10.28.762420](https://doi.org/10.64898/2026.10.28.762420)。
+
+<p align="center">
+  <img src="assets/ark-admet-overview.svg" alt="Ark-ADMET 的特征、模型和评价流程" width="100%">
+</p>
 
 ## 这个仓库提供什么
 
@@ -28,6 +32,10 @@
 | 参数怎么定 | 作者公布一套，22 个性质都用它 | 作者公布一套，22 个性质都用它 | 每个性质单独挑。从训练数据里留出一块来比较，新设置更好才换上。测试集不参加比较，挑完才用它打分 |
 
 在预印本使用的那份公开榜单快照上，21 个能排名的端点里有 7 个第 1。其中 3 个超过当时的最好成绩：微粒体清除（Spearman 0.634 对 0.630）、PPBR（MAE 7.349 对 7.440）、CYP3A4 抑制（AUPRC 0.917 对 0.916）。4 个与当时最好成绩相同：溶解度（0.741）、HIA（0.993）、Ames（0.871）、CYP2C9 抑制（0.859）。另有 5 个是第 2 或第 3，9 个是第 4 及以后。没有任何一个可选部件出现在全部第 1 名里。快照之后的实时榜单还会变。
+
+<p align="center">
+  <img src="assets/leaderboard-snapshot.svg" alt="预印本所用榜单快照中的排名分布" width="100%">
+</p>
 
 ## 两分钟上手
 
@@ -60,6 +68,14 @@ python reproduce_tdc.py --endpoint pgp_broccatelli --device gpu
 命令会打印该端点的 `evaluate_many`，并写入 `cache/leaderboard_results.json`。每个种子先四舍五入到三位小数，再取这五个数的平均和总体标准差，结果再保留三位小数。
 
 ## 跑完全部端点
+
+先安装可选特征块，并确认 `PATH` 里能找到 Java：
+
+```bash
+pip install -r requirements-optional.txt
+```
+
+然后运行全部 22 个端点：
 
 ```bash
 python reproduce_tdc.py --all --device gpu

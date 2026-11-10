@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc">
+  <title id="title">Ark-ADMET model and evaluation overview</title>
+  <desc id="desc">Molecular SMILES are converted into shared fingerprints and endpoint-selected optional representations, fitted with CatBoost and an optional MiniMol head, then evaluated over five seeds.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+    <style>
+      .title { font: 700 25px Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 14px Arial, sans-serif; fill: #475569; }
+      .label { font: 700 16px Arial, sans-serif; fill: #0f172a; }
+      .small { font: 400 13px Arial, sans-serif; fill: #475569; }
+      .count { font: 700 13px Arial, sans-serif; fill: #0369a1; }
+      .box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; }
+      .core { fill: #e0f2fe; stroke: #0284c7; stroke-width: 2; }
+      .optional { fill: #f8fafc; stroke: #94a3b8; stroke-width: 1.5; }
+      .model { fill: #ede9fe; stroke: #7c3aed; stroke-width: 2; }
+      .eval { fill: #dcfce7; stroke: #16a34a; stroke-width: 2; }
+      .arrow { fill: none; stroke: #64748b; stroke-width: 2.2; marker-end: url(#arrow); }
+      .dash { fill: none; stroke: #94a3b8; stroke-width: 1.5; stroke-dasharray: 5 5; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="440" rx="18" fill="#f8fafc"/>
+  <text x="42" y="48" class="title">One shared backbone, selected per endpoint</text>
+  <text x="42" y="73" class="subtitle">The same candidate blocks are accepted or rejected independently for each ADMET property.</text>
+
+  <rect x="42" y="154" width="145" height="104" rx="14" class="box"/>
+  <text x="114.5" y="189" text-anchor="middle" class="label">SMILES</text>
+  <text x="114.5" y="214" text-anchor="middle" class="small">Official TDC split</text>
+  <text x="114.5" y="236" text-anchor="middle" class="small">22 endpoints</text>
+
+  <path d="M187 206 H235" class="arrow"/>
+
+  <rect x="237" y="117" width="208" height="178" rx="14" class="core"/>
+  <text x="341" y="148" text-anchor="middle" class="label">Shared fingerprints</text>
+  <text x="341" y="170" text-anchor="middle" class="small">2,563 dimensions</text>
+  <line x1="263" y1="184" x2="419" y2="184" stroke="#7dd3fc"/>
+  <text x="263" y="208" class="small">Morgan counts</text>
+  <text x="419" y="208" text-anchor="end" class="count">1,024</text>
+  <text x="263" y="231" class="small">Avalon counts</text>
+  <text x="419" y="231" text-anchor="end" class="count">1,024</text>
+  <text x="263" y="254" class="small">ErG</text>
+  <text x="419" y="254" text-anchor="end" class="count">315</text>
+  <text x="263" y="277" class="small">RDKit descriptors</text>
+  <text x="419" y="277" text-anchor="end" class="count">200</text>
+
+  <path d="M445 206 H493" class="arrow"/>
+
+  <rect x="495" y="86" width="247" height="240" rx="14" class="box"/>
+  <text x="618.5" y="117" text-anchor="middle" class="label">Endpoint-selected blocks</text>
+  <text x="618.5" y="138" text-anchor="middle" class="small">Frozen before test scoring</text>
+
+  <rect x="517" y="156" width="203" height="38" rx="9" class="optional"/>
+  <text x="531" y="180" class="small">PaDEL 3D columns</text>
+  <text x="705" y="180" text-anchor="end" class="count">17 / 22</text>
+
+  <rect x="517" y="204" width="203" height="38" rx="9" class="optional"/>
+  <text x="531" y="228" class="small">Frozen GIN, 300-d</text>
+  <text x="705" y="228" text-anchor="end" class="count">9 / 22</text>
+
+  <rect x="517" y="252" width="203" height="38" rx="9" class="optional"/>
+  <text x="531" y="276" class="small">MiniMol in tree, 512-d</text>
+  <text x="705" y="276" text-anchor="end" class="count">5 / 22</text>
+
+  <path d="M742 206 H790" class="arrow"/>
+
+  <rect x="792" y="117" width="170" height="178" rx="14" class="model"/>
+  <text x="877" y="154" text-anchor="middle" class="label">CatBoost</text>
+  <text x="877" y="177" text-anchor="middle" class="small">Per-endpoint settings</text>
+  <line x1="816" y1="196" x2="938" y2="196" stroke="#c4b5fd"/>
+  <text x="877" y="222" text-anchor="middle" class="small">Optional MiniMol head</text>
+  <text x="877" y="243" text-anchor="middle" class="small">width 128</text>
+  <text x="877" y="266" text-anchor="middle" class="count">12 / 22</text>
+
+  <path d="M962 206 H1010" class="arrow"/>
+
+  <rect x="1012" y="117" width="146" height="178" rx="14" class="eval"/>
+  <text x="1085" y="152" text-anchor="middle" class="label">5 seeds</text>
+  <text x="1085" y="175" text-anchor="middle" class="small">1, 2, 3, 4, 5</text>
+  <line x1="1036" y1="193" x2="1134" y2="193" stroke="#86efac"/>
+  <text x="1085" y="219" text-anchor="middle" class="small">Official test set</text>
+  <text x="1085" y="250" text-anchor="middle" class="count">mean +/- std</text>
+
+  <path d="M618 326 V364 H1085 V295" class="dash"/>
+  <text x="851.5" y="392" text-anchor="middle" class="small">Selection uses held-out training data. The test set is scored only after settings are frozen.</text>
+</svg>
