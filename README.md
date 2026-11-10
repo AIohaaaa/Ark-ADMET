@@ -9,7 +9,7 @@ Each endpoint keeps the same fingerprint block and may add PaDEL 3D columns, a f
 Inference checkpoints, without the training entry point, are at [huggingface.co/Eonark/Ark-ADMET](https://huggingface.co/Eonark/Ark-ADMET). The preprint is [bioRxiv 2026.10.28.762420](https://doi.org/10.64898/2026.10.28.762420).
 
 <p align="center">
-  <img src="assets/ark-admet-overview.svg" alt="Ark-ADMET feature, model, and evaluation flow" width="100%">
+  <img src="assets/ark-admet-overview.png" alt="Ark-ADMET feature, model, and evaluation flow" width="100%">
 </p>
 
 ## What Ark-ADMET provides

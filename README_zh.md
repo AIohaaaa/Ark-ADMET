@@ -9,7 +9,7 @@
 只做推理的检查点在 [huggingface.co/Eonark/Ark-ADMET](https://huggingface.co/Eonark/Ark-ADMET)。预印本是 [bioRxiv 2026.10.28.762420](https://doi.org/10.64898/2026.10.28.762420)。
 
 <p align="center">
-  <img src="assets/ark-admet-overview.svg" alt="Ark-ADMET 的特征、模型和评价流程" width="100%">
+  <img src="assets/ark-admet-overview.png" alt="Ark-ADMET 的特征、模型和评价流程" width="100%">
 </p>
 
 ## 这个仓库提供什么
